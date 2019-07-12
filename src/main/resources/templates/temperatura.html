@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+</head>
+<style>
+	#timeToRender {
+		position:absolute; 
+		top: 10px; 
+		font-size: 20px; 
+		font-weight: bold; 
+		background-color: #d85757;
+		padding: 0px 4px;
+		color: #ffffff;
+	}
+</style>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+    
+<div class="container">
+	<div class="col-sm-12 text-center">
+       <label class="label label-success">Temperatura</label>
+      <div id="line-example" style="min-height:250px;"></div>
+    </div>
+    
+    <div class="col-sm-12 text-center">
+       <label class="label label-success">Humedad</label>
+       <div id="line-humedad" style="min-height:250px;"></div>
+    </div>   
+                              
+</div>
+	
+	<script src="/js/jquery.min.js"></script>
+    <script src="/js/sockjs.js"></script>
+    <script src="/js/stomp.min.js"></script>
+	<script src="/js/raphael-min.js"></script>
+	<script src="/js/morris.min.js"></script>	
+	<script src="/js/babel.min.js"></script>
+	<script src="/js/temperaturaConnection.js"></script>
+</body>
+</html>

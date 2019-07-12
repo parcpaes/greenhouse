@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ING INFORMATICA-2018</title>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/font-icons/entypo/css/entypo.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-icons/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+		<link href="js/datatables/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<link href="js/datatables/css/bootstrapValidator.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+        	body,table, .btn{
+				font-size: 12px !important;
+			}
+			.toolbar {
+		    float: left;
+			}
+			.row{
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+			}		
+			.image-preview-input {
+			    position: relative;
+			    overflow: hidden;
+			    margin: 0px;    
+			    color: #333;
+			    background-color: #fff;
+			    border-color: #ccc;    
+			}
+			.image-preview-input input[type=file] {
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    margin: 0;
+			    padding: 0;
+			    font-size: 20px;
+			    cursor: pointer;
+			    opacity: 0;
+			    filter: alpha(opacity=0);
+			}
+			.image-preview-input-title {
+			    margin-left:2px;
+			}
+        </style>
+	</head>
+	<body>
+	
+	
+	
+	
+			<div class="container">
+					<div class="row">
+						<h3 class="text-center text-primary">Adicionar Rol</h3>
+					</div>
+                	<form action="guardarModrol.html" method="post" class="form-horizontal" id="defaultForm">
+                	
+                	
+                	
+                	<div class="row">
+	                  	<div class="col-xs-12 col-md-6">
+	                  		<div class="form-group">
+	                  			<label for="ci" class="control-label col-xs-12 col-sm-2">Ci:</label>                  			
+	                  			<div class="col-xs-12 col-sm-10">
+	                  				<input type="text" class="form-control" id="ci" placeholder="apellido paterno" value="$rol.ci" disabled>
+	                  				<input type="hidden" class="form-control" name="cedula" value="$rol.ci">
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	                  	<div class="col-xs-12 col-md-6">
+	                  		<div class="form-group">
+	                  			<label for="nombre" class="control-label col-xs-12 col-sm-2" >Nombre:</label>                  			
+	                  			<div class="col-xs-12 col-sm-10"> 
+	                  				<input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" value="$!rol.nombre">
+	                  			</div>
+	                  		</div>
+	                  	</div>
+                  	</div>
+                  	
+                  	
+                  	
+                  	<div class="row">
+                  		<div class="col-xs-12 col-md-6">
+	                  		<div class="form-group">
+	                  			<label for="ap" class="control-label col-xs-12 col-sm-2">Ap. Paterno:</label>                  			
+	                  			<div class="col-xs-12 col-sm-10">
+	                  				<input type="text" class="form-control" id="ap" placeholder="apellido paterno" name="ap" value="$!rol.ap">
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	                  	<div class="col-xs-12 col-md-6">
+	                  		<div class="form-group">
+	                  			<label for="am" class="control-label col-xs-12 col-sm-2" >Ap. Materno:</label>                  			
+	                  			<div class="col-xs-12 col-sm-10"> 
+	                  				<input type="text" class="form-control" id="am" placeholder="apellido materno" name="am" value="$!rol.am">
+	                  			</div>
+	                  		</div>
+	                  	</div>
+                  	</div>
+                  	<div class="row">
+                  		<div class="col-xs-12 col-md-6">
+	                  		<div class="form-group">
+	                  			<label for="telefono" class="control-label col-xs-12 col-sm-2">Telefono:</label>                  			
+	                  			<div class="col-xs-12 col-sm-10">
+	                  				<input type="text" class="form-control" id="telefono" placeholder="telefono" name="telefono" value="$!rol.telefono">
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	                  	<div class="col-xs-12 col-md-6">
+	                  		<div class="form-group">
+	                  			<label for="rol" class="control-label col-xs-12 col-sm-2">Rol:</label>                  			
+	                  			<div class="col-xs-12 col-sm-10">
+	                  				<select class="form-control select2" style="width: 100%;" id="rol" name="rol">
+	                      				<option value="" selected="selected">Seleccione</option>
+	                      				
+	                    			</select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+                  	</div>
+                 
+                  	<div class="row">
+		                  	<div class="col-xs-12 col-sm-12 text-center">
+		                    	<button type="submit" class="btn btn-primary" id="guardar">GUARDAR</button>	                                      
+		                    	<button  type="button" class="btn btn-primary" onclick="history.back()">RETORNAR</button>
+		                    </div>
+	                    
+                    </div>
+                  
+                  </form>
+                	
+                	
+                </div>
+				
+	
+	
+	
+	
+			
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/datatables/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/datatables/js/bootstrapValidator.js" type="text/javascript"></script>
+ 
+	</body>
+</html>
+			
+
+	
