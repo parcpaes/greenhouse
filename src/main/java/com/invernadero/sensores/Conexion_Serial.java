@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.sensores;
+package com.invernadero.sensores;
 
 import gnu.io.CommPortIdentifier;
 import gnu.io.PortInUseException;

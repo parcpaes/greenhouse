@@ -1,11 +1,11 @@
-package com.invernadero.springsocket.service;
+package com.invernadero.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.*;
 import org.springframework.stereotype.Service;
 
-import com.invernadero.springsocket.sensores.Conexion_Serial;
+import com.invernadero.sensores.Conexion_Serial;
 
 import java.util.concurrent.ConcurrentHashMap;
 import gnu.io.CommPortIdentifier;

@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.sensores;
+package com.invernadero.sensores;
 
 import java.util.Date;
 import java.util.LinkedList;
@@ -11,10 +11,10 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-import com.invernadero.springsocket.model.Temperatura;
-import com.invernadero.springsocket.model.UserResponse;
-import com.invernadero.springsocket.service.SerialCommunicationService;
-import com.invernadero.springsocket.service.TemperaturaDB;
+import com.invernadero.model.Temperatura;
+import com.invernadero.model.UserResponse;
+import com.invernadero.service.SerialCommunicationService;
+import com.invernadero.service.TemperaturaDB;
 
 @EnableScheduling
 @Configuration

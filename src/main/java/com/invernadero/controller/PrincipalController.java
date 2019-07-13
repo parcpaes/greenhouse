@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.controller;
+package com.invernadero.controller;
 
 import java.io.*;
 import java.util.*;
@@ -19,13 +19,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.invernadero.springsocket.service.ControlDb;
+import com.invernadero.service.CuentaAccessService;
 
 @Controller
-public class principal {
+public class PrincipalController {
 
 	@Autowired
-	ControlDb controlDb;
+	CuentaAccessService usuario;
 
 	@RequestMapping(value = "/" , method = RequestMethod.GET ) 
 	public String inicio() throws IOException {		
@@ -36,12 +36,11 @@ public class principal {
 	@RequestMapping(value = "/validar",method = RequestMethod.POST)
 	public String validar(HttpServletRequest request, HttpServletResponse response, Model model,
 		@RequestParam String user, String pass) throws IOException {
-		String mensaje = "";		
-		int contador = controlDb.valida(user, pass);
-		if (contador == 1) {
+		
+		if (usuario.valida(user, pass)) {
 			response.sendRedirect("principal.html");
 		}
-		mensaje = "usuario y/o password incorrectos";
+		String mensaje = "usuario y/o password incorrectos";
 		model.addAttribute("aviso", mensaje);
 		return "index";
 	}

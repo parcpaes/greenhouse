@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.controller;
+package com.invernadero.controller;
 
 import java.io.*;
 import java.util.*;
@@ -17,15 +17,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invernadero.springsocket.service.PersonalService;
+import com.invernadero.service.PersonalService;
 
 @Controller
-public class usuario {
+public class PersonalController {
 
 	@Autowired
 	PersonalService usuarioDb;
-	
-	//@GetMapping("/students")
+
+	// @GetMapping("/students")
 	@RequestMapping("/usuarios")
 	public String gestionUsuario(HttpServletRequest request, HttpServletResponse response, Model model)
 			throws IOException {

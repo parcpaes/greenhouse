@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.service;
+package com.invernadero.service;
 
 
 import java.util.*;
@@ -40,5 +40,5 @@ public class PersonalService{
 		String xsql="update personal set estado=false where (ci=?)";
 		return this.jdbcTemplate.update(xsql, new Object[] {Integer.parseInt(ci)});
 	}
-	
+
 }
