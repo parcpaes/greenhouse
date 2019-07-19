@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.model;
+package com.invernadero.model;
 
 public class UserResponse {
 	private String temp="0",humidity="0";	

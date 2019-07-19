@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.model;
+package com.invernadero.model;
 
 import java.util.Date;
 

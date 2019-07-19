@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.controller;
+package com.invernadero.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Sensores {
+public class SensoresController {
 	
 	@RequestMapping("/sensortemp")
 	public String gestionUsuario(HttpServletRequest request, HttpServletResponse response, Model model)

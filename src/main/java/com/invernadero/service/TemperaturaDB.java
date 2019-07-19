@@ -1,4 +1,4 @@
-package com.invernadero.springsocket.service;
+package com.invernadero.service;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.invernadero.springsocket.model.Temperatura;
+import com.invernadero.model.Temperatura;
 
 //@Service indica que la clase es un bean de la capa de negocio
 @Service
