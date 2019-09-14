@@ -16,5 +16,4 @@ public class SpringsocketApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }

@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{    
+    font-family: sans-serif; 
+    background-size: cover;     
+}
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 100vh;    
+    
+    background-image:linear-gradient(
+        to right bottom,
+        rgba(126,213,111,0.8),
+        rgba(40,180,131,0.8)),
+        url(./../img/spratt.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.box{
+    flex:0 1 92%;
+    position: absolute;        
+    padding:40px;
+    background: rgba(0,0,0,.8);    
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;    
+}
+
+.box__title{
+    padding: 0 0 30px;
+    margin: 0;
+    color: #fff;
+    text-align:center;
+}
+
+.login__inputBox{
+    position: relative;
+}
+
+.login__inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    background:transparent;
+}
+
+
+.login__inputBox label{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login__inputBox input:focus ~ label,
+.login__inputBox input:valid ~ label{
+    top: -18px;
+    left: 0;
+    color:#03a9f4;
+    font-size: 12px;
+}
+
+.btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background:red;
+}
+
+.btn--sky{
+    background: transparent;
+    border:none;
+    outline: none;
+    color:#fff;
+    background: #03a9f4;
+}
+
+@media only screen and (min-width: 480px)  {
+    .box{
+        width: 320px;
+    }
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+    .box{
+        width: 420px;
+    }
+}
