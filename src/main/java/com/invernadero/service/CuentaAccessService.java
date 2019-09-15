@@ -22,12 +22,11 @@ public class CuentaAccessService {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	//@SuppressWarnings("deprecation")
-	public boolean valida(String user,String pass) throws DataAccessException {		
+	public boolean validaLogin(String user,String pass) throws DataAccessException{	
 		String xsql="select count(*) from cuenta d, personal u where (d.clave=?)"
-				+ " and(d.usuario=?)and(d.ci=u.ci)and(u.estado='t') ";
+				+ " and(d.usuario=?)and(d.ci=u.ci)and(u.estado='t')";
 		//return this.jdbcTemplate.queryForInt(xsql, new Object[]{pass,user});
 		
-		Boolean validar  = jdbcTemplate.queryForObject(xsql, new Object[]{pass,user},Boolean.class);
-		return validar;
+		return jdbcTemplate.queryForObject(xsql, new Object[]{pass,user},Boolean.class);		
 	}
 }

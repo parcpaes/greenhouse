@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,35 +27,27 @@ public class PrincipalController {
 
 	@Autowired
 	CuentaAccessService usuario;
-
-	@RequestMapping(value = "/" , method = RequestMethod.GET ) 
-	public String inicio() throws IOException {		
-		//ModelAndView modelAndView = new ModelAndView("/index.html");		
-		return "index";
+	private String mensaje = "";
+	@GetMapping(value = "/") 
+	public String inicio(Model model) throws IOException {		
+		return "login";
 	}
 
-	@RequestMapping(value = "/validar",method = RequestMethod.POST)
+	@PostMapping(value = "/validar")
 	public String validar(HttpServletRequest request, HttpServletResponse response, Model model,
 		@RequestParam String user, String pass) throws IOException {
 		
-		if (usuario.valida(user, pass)) {
+		if (usuario.validaLogin(user, pass)) {
 			response.sendRedirect("principal.html");
 		}
-		String mensaje = "usuario y/o password incorrectos";
-		model.addAttribute("aviso", mensaje);
-		return "index";
+		
+		mensaje = "usuario y/o password incorrectos";
+		model.addAttribute("login-message", mensaje);
+		return "login";
 	}
 
 	@RequestMapping({ "principal.html" })
 	public String principal(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
-
 		return "principal";
 	}
-
-	@RequestMapping({ "index2.html" })
-	public String prueba(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
-
-		return "index2";
-	}
-
 }
